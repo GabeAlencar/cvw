@@ -1,7 +1,6 @@
 {
   "base": {
     "xlen": 32,
-    "reserved_behavior": "trivial",
     "E": false,
     "writable_misa": false,
     "writable_fiom": true,
@@ -26,6 +25,7 @@
       "software_check": false
     },
     "reserved_behavior": {
+      "sc_match_success": "trivial",
       "amocas_odd_register": "AMOCAS_Illegal",
       "fcsr_rm": "Fcsr_RM_Illegal",
       "pmpcfg_write_only": "PMP_ClearPermissions",
@@ -141,7 +141,6 @@
     },
     "clock_frequency": 1000000000,
     "instructions_per_tick": 2,
-    "reservation_set_size_exp": 6,
     "wfi_is_nop": true
   },
   "extensions": {
@@ -170,12 +169,6 @@
       "supported": false
     },
     "U": {
-      "supported": false
-    },
-    "Zibi": {
-      "supported": false
-    },
-    "Zic64b": {
       "supported": false
     },
     "Zicbom": {
@@ -256,9 +249,6 @@
     "Zfinx": {
       "supported": false
     },
-    "Zdinx": {
-      "supported": false
-    },
     "Zca": {
       "supported": true
     },
@@ -332,9 +322,6 @@
     "Zhinxmin": {
       "supported": false
     },
-    "Zvabd": {
-      "supported": false
-    },
     "Zvfbfmin": {
       "supported": false
     },
@@ -398,6 +385,7 @@
       "supported": false
     },
     "Stateen": {
+      "supported": false,
       "C_readonly_zero": false,
       "SE0_readonly_zero": false,
       "Smstateen": {
