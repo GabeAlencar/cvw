@@ -1,6 +1,7 @@
 {
   "base": {
     "xlen": 32,
+    "reserved_behavior": "trivial",
     "E": false,
     "writable_misa": false,
     "writable_fiom": true,
@@ -16,13 +17,21 @@
       "samo_address_misaligned": true,
       "samo_access_fault": true,
       "fetch_address_misaligned": true,
-      "fetch_access_fault": true
+      "fetch_access_fault": true,
+      "fetch_page_fault": false,
+      "hardware_breakpoint": false,
+      "load_page_fault": false,
+      "reserved_exceptions": false,
+      "samo_page_fault": false,
+      "software_breakpoint": false,
+      "software_check": false
     }
   },
   "memory": {
     "pmp": {
       "grain": 0,
       "count": 16,
+      "usable_count": 16,
       "tor_supported": true,
       "na4_supported": true,
       "napot_supported": true
@@ -119,6 +128,7 @@
     "hartid": 0,
     "reset_vector": 4096,
     "cache_block_size_exp": 6,
+    "reservation_set_size_exp": 4,
     "clint": {
       "base": 33554432,
       "size": 786432
@@ -153,6 +163,15 @@
       "supported": false
     },
     "U": {
+      "supported": false
+    },
+    "Ssqosid": {
+      "supported": false
+    },
+    "Sstvala": {
+      "supported": false
+    },
+    "Stateen": {
       "supported": false
     },
     "Zicbom": {
@@ -214,6 +233,9 @@
       "sto": {
         "is_nop": false
       }
+    },
+    "Zdinx": {
+      "supported": false
     },
     "Zfa": {
       "supported": false
@@ -291,6 +313,12 @@
     "Zkt": {
       "supported": false
     },
+    "Zibi": {
+      "supported": false
+    },
+    "Zic64b": {
+      "supported": false
+    },
     "Zhinx": {
       "supported": false
     },
@@ -337,6 +365,9 @@
       "supported": false
     },
     "Zvkt": {
+      "supported": false
+    },
+    "Zvabd": {
       "supported": false
     },
     "Sscofpmf": {
