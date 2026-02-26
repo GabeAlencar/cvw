@@ -1,17 +1,17 @@
 # riscvsingle_waves.do
 
-add wave -divider "--- CLOCK / RESET ---"
+# --- CLOCK / RESET ---
 add wave sim:/testbench/clk
 add wave sim:/testbench/reset
 
-add wave -divider "--- INSTRUCTION FETCH ---"
+# --- INSTRUCTION FETCH ---
 add wave -radix hex sim:/testbench/dut/PC
 add wave -radix hex sim:/testbench/dut/Instr
 add wave -radix hex sim:/testbench/dut/ifu/PCPlus4
 add wave -radix hex sim:/testbench/dut/ifu/PCNext
 add wave      sim:/testbench/dut/ifu/PCSrc
 
-add wave -divider "--- MEMORY INTERFACE ---"
+# --- MEMORY INTERFACE ---
 add wave -radix hex sim:/testbench/dut/IEUAdr
 add wave -radix hex sim:/testbench/dut/WriteData
 add wave -radix hex sim:/testbench/dut/ReadData
@@ -19,7 +19,7 @@ add wave      sim:/testbench/dut/MemEn
 add wave      sim:/testbench/dut/WriteEn
 add wave -radix bin sim:/testbench/dut/WriteByteEn
 
-add wave -divider "--- CONTROL ---"
+# --- CONTROL ---
 add wave -radix bin  sim:/testbench/dut/ieu/c/ALUControl
 add wave -radix bin  sim:/testbench/dut/ieu/c/ALUSrc
 add wave -radix bin  sim:/testbench/dut/ieu/c/ImmSrc
@@ -31,7 +31,7 @@ add wave      sim:/testbench/dut/ieu/c/Branch
 add wave      sim:/testbench/dut/ieu/c/Jump
 add wave      sim:/testbench/dut/ieu/c/ConditionMet
 
-add wave -divider "--- DATAPATH ---"
+# --- DATAPATH ---
 add wave -radix hex sim:/testbench/dut/ieu/dp/RD1
 add wave -radix hex sim:/testbench/dut/ieu/dp/RD2
 add wave -radix hex sim:/testbench/dut/ieu/dp/ImmExt
